@@ -1,0 +1,674 @@
+/* ==========================================================================
+   1. CSS VARIABLES (Custom Properties)
+   ========================================================================== */
+:root {
+  /* Color Palette */
+  --primary-color: #4f46e5;       /* Indigo */
+  --primary-hover: #4338ca;
+  --secondary-color: #06b6d4;     /* Cyan */
+  --accent-color: #f59e0b;        /* Amber */
+  --text-main: #1f2937;           /* Dark slate */
+  --text-muted: #6b7280;          /* Gray */
+  --bg-page: #f9fafb;             /* Off white */
+  --bg-surface: #ffffff;          /* Pure white */
+  --bg-subtle: #f3f4f6;           /* Light gray */
+  --border-color: #e5e7eb;
+
+  /* Typography */
+  --font-base: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.6;
+
+  /* Layout & Spacing */
+  --max-width: 1100px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+}
+
+/* ==========================================================================
+   2. GLOBAL RESETS & ACCESSIBILITY
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: var(--line-height-base);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Accessibility: Focus outlines for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+/* Reusable Container */
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+/* Section Header Helper */
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-subtitle {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  color: var(--text-main);
+}
+
+.section-desc {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   3. BUTTONS & UI COMPONENTS
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-outline {
+  border-color: var(--border-color);
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-sm {
+  padding: 0.45rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  background-color: #e0e7ff;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   4. HEADER & NAVBAR (Flexbox)
+   ========================================================================== */
+.site-header {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.brand-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.brand-logo span {
+  color: var(--primary-color);
+}
+
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* ==========================================================================
+   5. HERO SECTION (Flexbox)
+   ========================================================================== */
+.hero-section {
+  padding: 4.5rem 0 3.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg-page) 100%);
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 2.75rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.8rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-stats-card {
+  flex: 0 0 300px;
+  background-color: var(--bg-surface);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.stat-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   6. SERVICES SECTION (CSS Grid)
+   ========================================================================== */
+.services-section {
+  padding: 4.5rem 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background-color: var(--bg-surface);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.925rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.card-link {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  align-self: flex-start;
+}
+
+/* ==========================================================================
+   7. ABOUT / SHOWCASE SECTION (CSS Grid / Semantic Article + Aside)
+   ========================================================================== */
+.about-section {
+  padding: 4.5rem 0;
+  background-color: var(--bg-subtle);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.about-content p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.feature-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.feature-checklist li {
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.about-highlight-box {
+  background: var(--bg-surface);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--primary-color);
+}
+
+.about-highlight-box h3 {
+  margin-bottom: 0.75rem;
+}
+
+.about-highlight-box p {
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.author-tag {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-tag strong {
+  font-size: 0.95rem;
+}
+
+.author-tag span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   8. CONTACT FORM SECTION (HTML5 Forms + Accessibility)
+   ========================================================================== */
+.contact-section {
+  padding: 4.5rem 0;
+}
+
+.contact-container {
+  max-width: 750px;
+}
+
+.contact-form {
+  background-color: var(--bg-surface);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.form-fieldset {
+  border: none;
+  margin-bottom: 1.75rem;
+}
+
+.form-legend {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--bg-subtle);
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label,
+.form-label-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: var(--text-main);
+}
+
+.required {
+  color: #ef4444;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Radio & Checkbox Styling (Flexbox) */
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+.radio-label,
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.checkbox-group {
+  margin-top: 0.5rem;
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+}
+
+/* ==========================================================================
+   9. FOOTER (Flexbox)
+   ========================================================================== */
+.site-footer {
+  background-color: #111827;
+  color: #f3f4f6;
+  padding-top: 3.5rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #374151;
+}
+
+.footer-logo {
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+.footer-brand p {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  max-width: 280px;
+}
+
+.footer-nav h4,
+.footer-social h4 {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-nav a {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-nav a:hover {
+  color: #ffffff;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  transition: color var(--transition-fast);
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  padding: 1.25rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* ==========================================================================
+   10. RESPONSIVE DESIGN (Media Queries)
+   ========================================================================== */
+/* Tablet View (<= 850px) */
+@media (max-width: 850px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-stats-card {
+    width: 100%;
+    max-width: 400px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .stat-item {
+    border-bottom: none;
+    border-right: 1px solid var(--border-color);
+    padding-right: 1rem;
+    padding-bottom: 0;
+  }
+
+  .stat-item:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* Mobile View (<= 600px) */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-stats-card {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+  }
+
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
