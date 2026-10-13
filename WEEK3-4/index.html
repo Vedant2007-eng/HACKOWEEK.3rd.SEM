@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Studio | Modern Digital Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Navigation (HTML5 Semantics + Flexbox + A11y) -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo" aria-label="Apex Studio Homepage">Apex<span>Studio</span></a>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main>
+    <!-- Hero Section (Flexbox & Semantic Section) -->
+    <section class="hero-section" aria-labelledby="hero-heading">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge">🚀 Innovate &amp; Scale</span>
+          <h1 id="hero-heading">Build Next-Gen Web Experiences with Ease</h1>
+          <p class="hero-desc">
+            We deliver clean, accessible, and high-performance digital solutions crafted for modern businesses and visionary creators.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Book Consultation</a>
+            <a href="#services" class="btn btn-outline">Explore Services</a>
+          </div>
+        </div>
+        <div class="hero-stats-card">
+          <div class="stat-item">
+            <span class="stat-number">99.9%</span>
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">150+</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Dedicated Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section (CSS Grid) -->
+    <section id="services" class="services-section" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">What We Do</span>
+          <h2 id="services-heading">Core Capabilities &amp; Services</h2>
+          <p class="section-desc">Tailored design and engineering services to bring your ideas to life.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="card-icon" aria-hidden="true">💻</div>
+            <h3>Web Development</h3>
+            <p>Modern, responsive, and blazing-fast web applications built with semantic HTML5 and clean CSS3.</p>
+            <a href="#contact" class="card-link" aria-label="Learn more about Web Development">Learn More &rarr;</a>
+          </article>
+
+          <article class="service-card">
+            <div class="card-icon" aria-hidden="true">🎨</div>
+            <h3>UI/UX Design</h3>
+            <p>User-centered interface designs, intuitive interaction flows, and pixel-perfect design systems.</p>
+            <a href="#contact" class="card-link" aria-label="Learn more about UI and UX Design">Learn More &rarr;</a>
+          </article>
+
+          <article class="service-card">
+            <div class="card-icon" aria-hidden="true">⚡</div>
+            <h3>Speed &amp; SEO</h3>
+            <p>Optimized Core Web Vitals, accessible markup, and search engine best practices to rank higher.</p>
+            <a href="#contact" class="card-link" aria-label="Learn more about Speed and SEO">Learn More &rarr;</a>
+          </article>
+
+          <article class="service-card">
+            <div class="card-icon" aria-hidden="true">🔒</div>
+            <h3>Cloud &amp; Security</h3>
+            <p>Reliable cloud deployment, secure standard workflows, and ongoing maintenance support.</p>
+            <a href="#contact" class="card-link" aria-label="Learn more about Cloud and Security">Learn More &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Showcase Section (Semantic Article + Aside layout) -->
+    <section id="about" class="about-section" aria-labelledby="about-heading">
+      <div class="container about-layout">
+        <article class="about-content">
+          <span class="section-subtitle">Why Choose Apex</span>
+          <h2 id="about-heading">Built with Accessibility and Modern Standards in Mind</h2>
+          <p>
+            Every interface we create adheres strictly to accessibility guidelines (WCAG) and responsive web principles.
+            Whether users visit from mobile phones, tablets, or widescreen monitors, they enjoy a seamless experience.
+          </p>
+          <ul class="feature-checklist">
+            <li>✅ Fully Responsive Grid &amp; Flexbox structures</li>
+            <li>✅ Keyboard navigation &amp; screen reader ready</li>
+            <li>✅ Configurable styling using native CSS Variables</li>
+          </ul>
+        </article>
+
+        <aside class="about-highlight-box" aria-label="Our philosophy highlight">
+          <h3>Our Mission</h3>
+          <p>
+            "To bridge the gap between creative visual design and robust web architecture with simple, maintainable code."
+          </p>
+          <div class="author-tag">
+            <strong>Alex Morgan</strong>
+            <span>Lead Architect</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Contact Form Section (HTML5 Forms + Accessibility) -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+      <div class="container contact-container">
+        <div class="section-header">
+          <span class="section-subtitle">Let's Connect</span>
+          <h2 id="contact-heading">Get in Touch with Our Team</h2>
+          <p class="section-desc">Fill out the form below and we will get back to you within 24 hours.</p>
+        </div>
+
+        <form action="#" method="post" class="contact-form" novalidate>
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Personal Details</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Full Name <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. Jane Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="emailAddress">Email Address <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="emailAddress" name="emailAddress" placeholder="e.g. jane@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="serviceType">Service Interested In</label>
+                <select id="serviceType" name="serviceType">
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="web-dev">Web Development</option>
+                  <option value="ui-ux">UI/UX Design</option>
+                  <option value="seo">SEO &amp; Performance</option>
+                  <option value="consulting">General Consulting</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="budgetRange">Estimated Budget</label>
+                <select id="budgetRange" name="budgetRange">
+                  <option value="tier1">$500 - $1,500</option>
+                  <option value="tier2" selected>$1,500 - $5,000</option>
+                  <option value="tier3">$5,000+</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Project Specifics</legend>
+
+            <div class="form-group">
+              <span class="form-label-title">Project Urgency</span>
+              <div class="radio-group" role="radiogroup" aria-label="Project Urgency">
+                <label class="radio-label">
+                  <input type="radio" name="urgency" value="standard" checked>
+                  <span>Standard (1-2 months)</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="urgency" value="rush">
+                  <span>Urgent (2-4 weeks)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="projectDetails">Project Overview &amp; Requirements <span class="required" aria-hidden="true">*</span></label>
+              <textarea id="projectDetails" name="projectDetails" rows="4" placeholder="Briefly describe your goals, features, and timeline..." required></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="newsletter" name="newsletter" value="subscribe" checked>
+                <span>Receive occasional updates and design resources</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (Semantic Footer + Flexbox) -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo footer-logo">Apex<span>Studio</span></a>
+        <p>Creating clean, reliable, and accessible web experiences.</p>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Visit our GitHub">GitHub</a>
+          <a href="#" aria-label="Visit our Twitter">Twitter</a>
+          <a href="#" aria-label="Visit our LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Apex Studio. All rights reserved. Built with HTML5 &amp; CSS3.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
